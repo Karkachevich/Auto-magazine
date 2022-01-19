@@ -1,0 +1,85 @@
+.header {
+    position: relative;
+    display: flex;
+    min-height: 70px;
+    background-color: #191D2C;
+
+    &__navigation {
+        position: absolute;
+        display: flex;
+        top: 27px;
+        left: 50px;
+    }
+
+    @media screen and (max-width: 768px) {
+        &__navigation {
+            display: none;
+        }
+      }
+
+    &__navigation-link {
+        margin: 0;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        padding-right: 20px;
+        display: flex;
+    }
+
+    &__link-text {
+        font-family: Source Sans Pro;
+        font-style: normal;
+        font-weight: normal;
+        margin: 0;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #E1FD2C; 
+    }
+
+    &__mesto-logo {
+        margin: auto;
+    }
+
+    &__menu-button {
+        display: none;
+       
+    }
+
+    @media screen and (max-width: 768px) {
+        &__menu-button {
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           position: absolute;
+           top: 23px;
+           right: 34px;
+           cursor: pointer;
+           background-color: #191D2C;
+           padding: 0;
+           border: 0;
+        }
+      }
+
+      
+    @media screen and (max-width: 375px) {
+        &__menu-button {
+           top: 23px;
+           right: 20px;
+        }
+      }
+
+    &__menu-image {
+        width: 26px;
+        height: 24px;
+    }
+
+    @media screen and (max-width: 375px) {
+        &__menu-image {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+}
