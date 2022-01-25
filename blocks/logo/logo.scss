@@ -1,0 +1,17 @@
+.logo { 
+    width: 184px;
+    height: 38px;
+
+    @media screen and (max-width: 375px) {
+        &_place_footer {
+            width: 280px;
+            height: 58px;
+        }
+        &_place_header {
+            width: 100px;
+            height: 20px;
+        }
+
+    }
+}
+

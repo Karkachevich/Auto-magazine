@@ -1,0 +1,107 @@
+.footer {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 50% 50%;
+  background-color: #191D2C;
+  padding: 0;
+  border-top: 1px solid #E1FD2C;
+}
+.footer__section {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+}
+@media screen and (max-width: 500px) {
+  .footer__section {
+    padding-left: 20px;
+    padding-top: 20px;
+  }
+}
+.footer__section:nth-child(1) {
+  padding-right: 0;
+}
+.footer__section:nth-child(2) {
+  border-left: 1px solid #E1FD2C;
+}
+@media screen and (max-width: 800px) {
+  .footer__section:nth-child(2) {
+    border-left: 0;
+    padding-left: 0;
+  }
+}
+@media screen and (max-width: 500px) {
+  .footer__section:nth-child(2) {
+    border-left: 0;
+    padding: 70px 0 20px;
+  }
+}
+.footer__title {
+  font-weight: normal;
+  font-size: 46px;
+  line-height: 46px;
+  margin: 0;
+}
+@media screen and (max-width: 500px) {
+  .footer__title {
+    font-size: 26px;
+    line-height: 26px;
+  }
+}
+.footer__subtitle {
+  font-weight: normal;
+  font-size: 19px;
+  line-height: 28px;
+  margin-top: 16px;
+  margin-bottom: 64px;
+}
+@media screen and (max-width: 500px) {
+  .footer__subtitle {
+    font-size: 14px;
+    line-height: 14px;
+    margin-top: 14px;
+    margin-bottom: 60px;
+  }
+}
+.footer__place-logo {
+  margin: 0 0 0 auto;
+}
+@media screen and (max-width: 640px) {
+  .footer__place-logo {
+    margin: 0 auto 0 50px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .footer__place-logo {
+    margin-left: 20px;
+  }
+}
+.footer__copyright {
+  margin: auto 0 0 auto;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 13px;
+  text-align: right;
+  letter-spacing: 1px;
+}
+@media screen and (max-width: 640px) {
+  .footer__copyright {
+    margin: 20px auto 0 62px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .footer__copyright {
+    margin-left: 32px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .footer {
+    grid-template-columns: 1fr auto;
+  }
+}
+@media screen and (max-width: 640px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=footer.css.map */
