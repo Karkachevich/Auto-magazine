@@ -1,0 +1,78 @@
+.form {
+    display: flex;
+    flex-direction: column;
+
+    &__style {
+        display: flex; 
+    }
+
+    &__input {
+        background-color: #191D2C;
+        border: 1px solid #E1FD2C;
+        color: #E1FD2C;
+        height: 32px;
+        padding: 0 10px;
+        outline: none;
+    }
+
+    &__input::placeholder {
+        color: #E1FD2C;
+        font-weight: normal;
+        font-size: 9px;
+        line-height: 18px;
+    }
+
+    &__input:focus::placeholder {
+        color: transparent;
+    }
+    
+    &__input_type_name {
+        border-bottom: 0;
+        border-right: 0;
+        width: 149px;
+    }
+    @media screen and (max-width: 375px) {
+        &__input_type_name {
+            width: 119px;
+        }
+    }
+
+    &__input_type_lastName {
+        border-bottom: 0;
+        width: 149px;
+    }
+   @media screen and (max-width: 375px) {
+    &__input_type_lastName {
+            width: 119px;
+        }
+    }
+    &__input_type_email {
+        width: 240px;
+        border-right: 0;
+    }
+    @media screen and (max-width: 375px) {
+        &__input_type_email {
+            width: 180px;
+            }
+        }
+
+    &__button {
+        background-color: #E1FD2C;
+        border: 1px solid #E1FD2C;
+        width: 80px;
+        height: 34px;
+        padding: 0;
+        cursor: pointer;
+    }
+
+    &__button-text {
+        font-weight: normal;
+        font-size: 10px;
+        line-height: 13px;
+        text-align: center;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #191D2C;
+    }
+    
+}

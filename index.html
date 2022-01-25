@@ -10,18 +10,18 @@
 <body class="page">
     <header class="header">
         <nav class="header__navigation">
-            <a class="header__navigation-link page__link" href="./index.html">
+            <a class="header__navigation-link" href="./index.html">
               <p class="header__link-text">Факты</p>
             </a>
-            <a class="header__navigation-link page__link" href="./index.html">
+            <a class="header__navigation-link" href="./index.html">
               <p class="header__link-text">ГАЛЕРЕЯ</p>
             </a>
-            <a class="header__navigation-link page__link" href="./index.html">
+            <a class="header__navigation-link" href="./index.html">
               <p class="header__link-text">ПРЕССА</p>
             </a>
         </nav>
-        <div class="header__mesto-logo">
-            <img src="./images/AUTO-MAGAZINE.svg" alt="логотип" class="logo">
+        <div class="header__place-logo">
+            <img src="./images/AUTO-MAGAZINE.svg" alt="логотип" class="logo logo_place_header">
         </div>
         <button type="button" class="header__menu-button">
             <img src="./images/menu.svg" alt="меню" class="header__menu-image">
@@ -35,7 +35,7 @@
           <p class="presentation__text">С ЭЛЕКТРО ДВИГАТЕЛЕМ</p>
         </div>
         <img src="./images/Rectangle.jpg" alt="авто" class="presentation__image">
-        <button type="button" class="presentation__button"><p class="presentation__button-text">подробнее</p></button>
+        <button type="button" class="presentation__button">подробнее</button>
       </section>
       <section class="data">
         <div class="data__info">
@@ -82,13 +82,37 @@
             <button type="button" class="media__subtitle-button media__subtitle-button_active"></button>
             <button type="button" class="media__subtitle-button"></button>
             <button type="button" class="media__link-button">
-              <p class="media__link-text">Читать</p>
+             Читать
             </button>           
           </div>
         </div>
       </section>
-     
     </main>
+    <footer class="footer">
+      <dev class="footer__section">
+        <h2 class="footer__title">Подписка</h2>
+        <p class="footer__subtitle">На новые спецвыпуски машин.</p>
+        <form class="form">
+          <div class="form__style">
+            <input type="text" class="form__input form__input_type_name" placeholder="ИМЯ">
+            <input type="text" class="form__input form__input_type_lastName" placeholder="ФАМИЛИЯ">
+          </div>
+          <div class="form__style">
+          <input type="email" class="form__input form__input_type_email" placeholder="ПОЧТА">
+          <button type="submit" class="form__button">
+            <p class="form__button-text">подписка</p>
+          </button>
+          </div>
+        </form>
+      </dev>
+      <dev class="footer__section">
+        <dev class="footer__place-logo">
+          <img src="./images/AUTO-MAGAZINE.svg" alt="логотип" class="logo logo_place_footer">
+        </dev>
+        <div class="footer__copyright">&copy; Auto-Magazine 2021</div>
+      </dev>
+
+    </footer>
    
 </body>
 </html>

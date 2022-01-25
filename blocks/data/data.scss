@@ -89,6 +89,7 @@
         text-transform: uppercase;
         margin-top: 0;
         margin-bottom: 50px;
+        letter-spacing: 2px;
     }
 
     @media screen and (max-width: 500px) {
@@ -101,7 +102,7 @@
 
     &__argument-text {
         font-weight: 300;
-        font-size: 22px;
+        font-size: 21px;
         line-height: 32px;
         margin: 0 0 2px;
     }

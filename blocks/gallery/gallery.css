@@ -84,6 +84,9 @@
   margin-top: auto;
   margin-bottom: auto;
 }
+.gallery__button:hover {
+  opacity: 0.5;
+}
 .gallery__button:nth-child(2) {
   margin-left: auto;
 }

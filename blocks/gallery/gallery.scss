@@ -92,6 +92,10 @@
         margin-top: auto;
         margin-bottom: auto;
     }
+    &__button:hover {
+        opacity: 0.5;
+    }
+
 
     &__button:nth-child(2) {
         margin-left: auto;
