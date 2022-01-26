@@ -28,6 +28,12 @@ const spanSubtitle = document.querySelector('.media__span-accent');
 const textSubtitle = document.querySelector('.media__subtitle');
 const linkMedia = document.querySelector('.media__link-button');
 
+const inputName = document.querySelector('.form__input_type_name');
+const inputLastName =document.querySelector('.form__input_type_lastName');
+const inputEmail = document.querySelector('.form__input_type_email');
+const textButtonForm = document.querySelector('.form__button-text');
+const buttonForm = document.querySelector('.form__button');
+
 openNav.addEventListener('click', function () {
     navigation.classList.add('header__navigation-open');
     menu.classList.add('header__menu-close');
@@ -84,3 +90,33 @@ buttonTwoMedia.addEventListener('click', function () {
     textSubtitle.textContent = "Вэн Volkswagen e-Bulli скрестил классику с современной техникой.";
     linkMedia.href = "https://www.drive.ru/news/volkswagen/5e7447bdec05c4b251000010.html";
 })
+
+function activeButton() {
+    if((inputName.value === '') || (inputLastName.value === '') || (inputEmail.value === '')) {
+        textButtonForm.textContent = "подписка";
+    }
+    else {
+        textButtonForm.textContent = "Готово!";
+    }
+}
+activeButton();
+
+inputName.addEventListener('input', activeButton, false) 
+inputLastName.addEventListener('input', activeButton, false)
+inputEmail.addEventListener('input', activeButton, false)
+
+document.querySelectorAll('a[href^="#"').forEach(link => {
+
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        const href = this.getAttribute('href').substring(1);
+        const scroll = document.getElementById(href);
+        const position = scroll.getBoundingClientRect().top;
+        
+        scrollBy({
+            top: position,
+            behavior: 'smooth'
+        });
+    });
+});

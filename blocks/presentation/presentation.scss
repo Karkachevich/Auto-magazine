@@ -114,6 +114,7 @@
     &__button:hover {
         color: #191D2C;
         background-color: #E1FD2C;
+        transition: linear .3s;
     }
 
     @media screen and (max-width: 1200px) {
