@@ -22,6 +22,12 @@ const gallery = [
 const buttonPrev = document.querySelector('#prev');
 const buttonNext = document.querySelector('#next');
 
+const buttonOneMedia = document.querySelector('#one');
+const buttonTwoMedia = document.querySelector('#two');
+const spanSubtitle = document.querySelector('.media__span-accent');
+const textSubtitle = document.querySelector('.media__subtitle');
+const linkMedia = document.querySelector('.media__link-button');
+
 openNav.addEventListener('click', function () {
     navigation.classList.add('header__navigation-open');
     menu.classList.add('header__menu-close');
@@ -56,4 +62,25 @@ buttonPrev.addEventListener('click', function () {
         imageGallery.src = gallery[imageGallery.current].link;
         imageGallery.alt = gallery[imageGallery.current].name;
     }  
+})
+
+buttonOneMedia.classList.add('media__subtitle-button_active');
+spanSubtitle.textContent = "Engadget: ";
+textSubtitle.textContent = "VW’s e-BULLI concept shows how your classic van can become an EV.";
+linkMedia.href = "https://www.engadget.com/2020-03-20-vw-unveils-e-bulli-t1-electric-conversion.html";
+
+buttonOneMedia.addEventListener('click', function () {
+    buttonTwoMedia.classList.remove('media__subtitle-button_active');
+    buttonOneMedia.classList.add('media__subtitle-button_active');
+    spanSubtitle.textContent = "Engadget: ";
+    textSubtitle.textContent = "VW’s e-BULLI concept shows how your classic van can become an EV.";
+    linkMedia.href = "https://www.engadget.com/2020-03-20-vw-unveils-e-bulli-t1-electric-conversion.html";
+})
+
+buttonTwoMedia.addEventListener('click', function () {
+    buttonOneMedia.classList.remove('media__subtitle-button_active');
+    buttonTwoMedia.classList.add('media__subtitle-button_active');
+    spanSubtitle.textContent = "Drive.ru: ";
+    textSubtitle.textContent = "Вэн Volkswagen e-Bulli скрестил классику с современной техникой.";
+    linkMedia.href = "https://www.drive.ru/news/volkswagen/5e7447bdec05c4b251000010.html";
 })
