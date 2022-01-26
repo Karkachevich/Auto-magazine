@@ -51,6 +51,7 @@
     }
 
     &__navigation-link:hover {
+        transition: linear .3s;
         opacity: 0.5;
     }
 

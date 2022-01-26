@@ -51,6 +51,7 @@
   }
 }
 .header__navigation-link:hover {
+  transition: linear 0.3s;
   opacity: 0.5;
 }
 .header__link-text {
@@ -231,6 +232,7 @@
 .presentation__button:hover {
   color: #191D2C;
   background-color: #E1FD2C;
+  transition: linear 0.3s;
 }
 @media screen and (max-width: 1200px) {
   .presentation__button {
@@ -459,6 +461,7 @@
 }
 .gallery__button:hover {
   opacity: 0.5;
+  transition: linear 0.3s;
 }
 .gallery__button:nth-child(2) {
   margin-left: auto;
@@ -603,6 +606,7 @@
 .media__link-button:hover {
   color: #191D2C;
   background-color: #E1FD2C;
+  transition: linear 0.3s;
 }
 @media screen and (max-width: 500px) {
   .media__link-button {
