@@ -32,15 +32,26 @@
     }
 
     &__subtitle {
-        margin: 51px 50px 0;
+        display: inline;
+        margin: 0;
         font-weight: 300;
         font-size: 30px;
         line-height: 42px;
     }
 
+    &__subtitle-style {
+        display: inline-block;
+        margin: 51px 50px 0;
+    }
+    @media screen and (max-width: 500px){
+        &__subtitle-style {
+            margin: 21px 20px 0;
+        }
+    }
+
+
     @media screen and (max-width: 500px){
         &__subtitle {
-            margin: 21px 20px 0;
             font-weight: 300;
             font-size: 16px;
             line-height: 27px;
@@ -67,9 +78,10 @@
     }
 
     &__span-accent {
+        display: inline;
         font-weight: normal;
         font-size: 30px;
-        line-height: 42px;
+        line-height: 42px;  
         margin: 0;
     }
 
@@ -94,6 +106,7 @@
 
 
     &__link-button {
+        display: flex;
         width: 110px;
         height: 52px;
         background-color: #191D2C;
@@ -108,7 +121,9 @@
         margin-right: 0;
         margin-left: auto;
         padding: 0;
-
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
     }
     
     &__link-button:hover {
