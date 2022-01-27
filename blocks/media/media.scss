@@ -2,9 +2,9 @@
     display: grid;
     width: 100%;
     grid-template-columns: 50% 50%;
-    background-color: #191D2C;
+    background-color: #191d2c;
     padding: 0;
-    border-top: 1px solid #E1FD2C ;
+    border-top: 1px solid #e1fd2c;
 
     &__title {
         font-weight: normal;
@@ -13,7 +13,7 @@
         margin: 51px 50px;
     }
 
-    @media screen and (max-width: 800px){
+    @media screen and (max-width: 800px) {
         &__title {
             display: none;
         }
@@ -22,10 +22,10 @@
     &__section-subtitle {
         display: flex;
         flex-direction: column;
-        border-left: 1px solid #E1FD2C ;
-    
+        border-left: 1px solid #e1fd2c;
     }
-    @media screen and (max-width: 800px){
+
+    @media screen and (max-width: 800px) {
         &__section-subtitle {
             border-left: 0;
         }
@@ -43,14 +43,14 @@
         display: inline-block;
         margin: 51px 50px 0;
     }
-    @media screen and (max-width: 500px){
+
+    @media screen and (max-width: 500px) {
         &__subtitle-style {
             margin: 21px 20px 0;
         }
     }
 
-
-    @media screen and (max-width: 500px){
+    @media screen and (max-width: 500px) {
         &__subtitle {
             font-weight: 300;
             font-size: 16px;
@@ -61,8 +61,8 @@
     &__subtitle-button {
         width: 12px;
         height: 12px;
-        background-color: #191D2C;
-        border: 1px solid #E1FD2C;
+        background-color: #191d2c;
+        border: 1px solid #e1fd2c;
         box-sizing: border-box;
         border-radius: 50%;
         padding: 0;
@@ -74,19 +74,18 @@
     }
 
     &__subtitle-button_active {
-        background-color: #E1FD2C;
+        background-color: #e1fd2c;
     }
 
     &__span-accent {
         display: inline;
         font-weight: normal;
         font-size: 30px;
-        line-height: 42px;  
+        line-height: 42px;
         margin: 0;
     }
 
-    
-    @media screen and (max-width: 500px){
+    @media screen and (max-width: 500px) {
         &__span-accent {
             font-size: 16px;
             line-height: 27px;
@@ -98,23 +97,23 @@
         display: flex;
         flex-direction: row;
     }
-    @media screen and (max-width: 500px){
+
+    @media screen and (max-width: 500px) {
         &__link-zone {
             padding: 150px 20px 20px;
         }
     }
 
-
     &__link-button {
         display: flex;
         width: 110px;
         height: 52px;
-        background-color: #191D2C;
-        border: 1px solid #E1FD2C;
+        background-color: #191d2c;
+        border: 1px solid #e1fd2c;
         font-weight: normal;
         font-size: 19px;
         line-height: 28px;
-        color: #E1FD2C;
+        color: #e1fd2c;
         box-sizing: border-box;
         border-radius: 50%;
         cursor: pointer;
@@ -125,25 +124,25 @@
         justify-content: center;
         text-decoration: none;
     }
-    
+
     &__link-button:hover {
-        color: #191D2C;
-        background-color: #E1FD2C;
-        transition: linear .3s;
+        color: #191d2c;
+        background-color: #e1fd2c;
+        transition: linear 0.3s;
     }
-    @media screen and (max-width: 500px){
+
+    @media screen and (max-width: 500px) {
         &__link-button {
             width: 88px;
             height: 42px;
             font-size: 14px;
         }
     }
-
 }
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 800px) {
     .media {
         display: flex;
-        flex-direction: column;    
+        flex-direction: column;
     }
 }

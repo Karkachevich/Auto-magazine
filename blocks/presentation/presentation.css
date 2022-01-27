@@ -3,9 +3,9 @@
   width: 100%;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 400px 140px;
-  background-color: #191D2C;
+  background-color: #191d2c;
   padding: 150px 0;
-  border-top: 1px solid #E1FD2C;
+  border-top: 1px solid #e1fd2c;
 }
 .presentation__info {
   display: flex;
@@ -86,9 +86,9 @@
 .presentation__button {
   width: 360px;
   height: 64px;
-  border: 1px solid #E1FD2C;
+  border: 1px solid #e1fd2c;
   box-sizing: border-box;
-  background-color: #191D2C;
+  background-color: #191d2c;
   margin: auto auto 30px;
   padding: 0;
   font-weight: normal;
@@ -97,12 +97,12 @@
   text-align: center;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: #E1FD2C;
+  color: #e1fd2c;
   cursor: pointer;
 }
 .presentation__button:hover {
-  color: #191D2C;
-  background-color: #E1FD2C;
+  color: #191d2c;
+  background-color: #e1fd2c;
   transition: linear 0.3s;
 }
 @media screen and (max-width: 1200px) {

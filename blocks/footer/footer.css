@@ -2,9 +2,9 @@
   display: grid;
   width: 100%;
   grid-template-columns: 50% 50%;
-  background-color: #191D2C;
+  background-color: #191d2c;
   padding: 0;
-  border-top: 1px solid #E1FD2C;
+  border-top: 1px solid #e1fd2c;
 }
 .footer__section {
   display: flex;
@@ -21,7 +21,7 @@
   padding-right: 0;
 }
 .footer__section:nth-child(2) {
-  border-left: 1px solid #E1FD2C;
+  border-left: 1px solid #e1fd2c;
 }
 @media screen and (max-width: 800px) {
   .footer__section:nth-child(2) {

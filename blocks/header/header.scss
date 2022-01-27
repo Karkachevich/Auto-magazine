@@ -2,31 +2,35 @@
     position: relative;
     display: flex;
     min-height: 70px;
-    background-color: #191D2C;
+    background-color: #191d2c;
 
     &__navigation {
         position: absolute;
-        display: none;
+        display: flex;
         top: 27px;
         left: 50px;
     }
 
-    @media screen and (max-width: 768px){
+    @media screen and (max-width: 768px) {
         &__navigation {
             left: 34px;
+            opacity: 0;
+            visibility: hidden;
+            transition: visibility 0.5s, opacity 0.4s linear;
         }
     }
 
-    @media screen and (max-width: 320px){
+    @media screen and (max-width: 320px) {
         &__navigation {
             left: 20px;
         }
     }
-    
-     &__navigation-open {
-        display: flex;
+
+    &__navigation-open {
+        opacity: 1;
+        visibility: visible;
+        transition: visibility 0.5s, opacity 0.5s linear;
     }
-    
 
     @media screen and (min-width: 768px) {
         &__navigation {
@@ -43,18 +47,16 @@
         display: flex;
     }
 
-    @media screen and (max-width: 320px){ 
+    @media screen and (max-width: 320px) {
         &__navigation-link {
             padding-right: 16px;
         }
-        
     }
 
     &__navigation-link:hover {
-        transition: linear .3s;
+        transition: linear 0.3s;
         opacity: 0.5;
     }
-
 
     &__link-text {
         font-weight: normal;
@@ -63,15 +65,20 @@
         line-height: 16px;
         letter-spacing: 1px;
         text-transform: uppercase;
-        color: #E1FD2C; 
+        color: #e1fd2c;
     }
 
     &__place-logo {
         margin: auto;
+        opacity: 1;
+        visibility: visible;
+        transition: visibility 0.5s, opacity 0.4s linear;
     }
 
     &__close-logo {
-        display: none;
+        opacity: 0;
+        visibility: hidden;
+        transition: visibility 0.5s, opacity 0.3s linear;
     }
 
     &__menu-button {
@@ -80,26 +87,25 @@
 
     @media screen and (max-width: 768px) {
         &__menu-button {
-           display: flex;
-           flex-direction: column;
-           justify-content: center;
-           position: absolute;
-           top: 23px;
-           right: 34px;
-           cursor: pointer;
-           background-color: #191D2C;
-           padding: 0;
-           border: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: absolute;
+            top: 23px;
+            right: 34px;
+            cursor: pointer;
+            background-color: #191d2c;
+            padding: 0;
+            border: 0;
         }
-      }
+    }
 
-      
     @media screen and (max-width: 375px) {
         &__menu-button {
-           top: 23px;
-           right: 20px;
+            top: 23px;
+            right: 20px;
         }
-      }
+    }
 
     &__menu-image {
         width: 26px;
@@ -107,9 +113,8 @@
     }
 
     &__menu-close {
-       display: none;
+        display: none;
     }
-    
 
     @media screen and (max-width: 375px) {
         &__menu-image {
@@ -125,5 +130,4 @@
     &__close-button {
         display: flex;
     }
-
 }
