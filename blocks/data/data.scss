@@ -2,9 +2,9 @@
     display: grid;
     width: 100%;
     grid-template-columns: 50% 25% 25%;
-    background-color: #191D2C;
+    background-color: #191d2c;
     padding: 0;
-    border-top: 1px solid #E1FD2C ;
+    border-top: 1px solid #e1fd2c;
 
     &__info {
         display: flex;
@@ -13,14 +13,14 @@
 
     @media screen and (max-width: 1000px) {
         &__info {
-         grid-row: 1;
-         grid-column: 1 / span 2;
+            grid-row: 1;
+            grid-column: 1 / span 2;
         }
     }
 
     @media screen and (max-width: 500px) {
         &__info {
-         padding: 18px 20px;
+            padding: 18px 20px;
         }
     }
 
@@ -34,7 +34,7 @@
 
     @media screen and (max-width: 1000px) {
         &__info-text {
-         width: 100%;
+            width: 100%;
         }
     }
 
@@ -58,26 +58,25 @@
         }
     }
 
-
     &__arguments {
         display: flex;
         flex-direction: column;
         padding: 40px 50px;
-        border-left: 1px solid #E1FD2C;
+        border-left: 1px solid #e1fd2c;
     }
 
     @media screen and (max-width: 1000px) {
         &__arguments {
-         grid-row: 2;
-         border-top: 1px solid #E1FD2C;
+            grid-row: 2;
+            border-top: 1px solid #e1fd2c;
         }
     }
 
     @media screen and (max-width: 500px) {
         &__arguments {
-         grid-row: auto;
-         border-left: 0;
-         padding: 20px;
+            grid-row: auto;
+            border-left: 0;
+            padding: 20px;
         }
     }
 
@@ -113,7 +112,6 @@
             line-height: 20px;
         }
     }
-
 }
 
 @media screen and (max-width: 1000px) {

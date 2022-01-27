@@ -1,26 +1,29 @@
 .gallery {
     display: flex;
     flex-direction: column;
-    background-color: #191D2C;
-    border-top: 1px solid #E1FD2C;
+    background-color: #191d2c;
+    border-top: 1px solid #e1fd2c;
 
     &__image {
         width: 720px;
         max-height: 540px;
-        border-right: 1px solid #E1FD2C;
+        border-right: 1px solid #e1fd2c;
     }
+    
     @media screen and (max-width: 1200px) {
         &__image {
             border-right: 0;
             margin: 0 auto;
         }
     }
+
     @media screen and (max-width: 800px) {
         &__image {
             max-width: 700px;
             max-height: 510px;
         }
     }
+
     @media screen and (max-width: 766px) {
         &__image {
             width: calc(100% - 40px);
@@ -39,8 +42,8 @@
         flex-direction: row;
         width: 620px;
         padding: 0 50px;
-        border-top: 1px solid #E1FD2C;
-        border-right: 1px solid #E1FD2C;
+        border-top: 1px solid #e1fd2c;
+        border-right: 1px solid #e1fd2c;
     }
 
     @media screen and (max-width: 1200px) {
@@ -84,19 +87,19 @@
         width: 42px;
         height: 34px;
         cursor: pointer;
-        background-color: #191D2C;
+        background-color: #191d2c;
         padding: 0;
         border: 0;
-        color: #E1FD2C;
+        color: #e1fd2c;
         margin-left: 30px;
         margin-top: auto;
         margin-bottom: auto;
     }
+
     &__button:hover {
         opacity: 0.5;
-        transition: linear .3s;
+        transition: linear 0.3s;
     }
-
 
     &__button:nth-child(2) {
         margin-left: auto;
@@ -109,24 +112,23 @@
             width: 24px;
             height: 20px;
         }
-      
     }
+
     @media screen and (max-width: 500px) {
         &__button-image {
             width: 24px;
             height: 20px;
         }
     }
-
 }
 
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 1200px) {
     .gallery {
         padding: 35px 34px 0;
     }
 }
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 500px) {
     .gallery {
         padding: 20px 20px 0;
     }

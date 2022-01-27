@@ -2,9 +2,9 @@
     display: grid;
     width: 100%;
     grid-template-columns: 50% 50%;
-    background-color: #191D2C;
+    background-color: #191d2c;
     padding: 0;
-    border-top: 1px solid #E1FD2C ;
+    border-top: 1px solid #e1fd2c;
 
     &__section {
         display: flex;
@@ -12,7 +12,7 @@
         padding: 50px;
     }
 
-    @media screen and (max-width: 500px){
+    @media screen and (max-width: 500px) {
         &__section {
             padding-left: 20px;
             padding-top: 20px;
@@ -22,31 +22,32 @@
     &__section:nth-child(1) {
         padding-right: 0;
     }
+
     &__section:nth-child(2) {
-        border-left: 1px solid #E1FD2C ;
+        border-left: 1px solid #e1fd2c;
     }
-    @media screen and (max-width: 800px){
+
+    @media screen and (max-width: 800px) {
         &__section:nth-child(2) {
             border-left: 0;
             padding-left: 0;
         }
     }
 
-    @media screen and (max-width: 500px){
+    @media screen and (max-width: 500px) {
         &__section:nth-child(2) {
             border-left: 0;
             padding: 70px 0 20px;
-
         }
     }
 
-     &__title {
+    &__title {
         font-weight: normal;
         font-size: 46px;
         line-height: 46px;
         margin: 0;
     }
-    @media screen and (max-width: 500px){
+    @media screen and (max-width: 500px) {
         &__title {
             font-size: 26px;
             line-height: 26px;
@@ -58,14 +59,15 @@
         font-size: 19px;
         line-height: 28px;
         margin-top: 16px;
-        margin-bottom: 64px; 
+        margin-bottom: 64px;
     }
-    @media screen and (max-width: 500px){
-        &__subtitle  {
+    
+    @media screen and (max-width: 500px) {
+        &__subtitle {
             font-size: 14px;
             line-height: 14px;
             margin-top: 14px;
-            margin-bottom: 60px; 
+            margin-bottom: 60px;
         }
     }
 
@@ -73,13 +75,13 @@
         margin: 0 0 0 auto;
     }
 
-    @media screen and (max-width: 640px){
+    @media screen and (max-width: 640px) {
         &__place-logo {
             margin: 0 auto 0 50px;
         }
     }
 
-    @media screen and (max-width: 500px){
+    @media screen and (max-width: 500px) {
         &__place-logo {
             margin-left: 20px;
         }
@@ -94,26 +96,26 @@
         letter-spacing: 1px;
     }
 
-    @media screen and (max-width: 640px){
+    @media screen and (max-width: 640px) {
         &__copyright {
             margin: 20px auto 0 62px;
         }
     }
 
-    @media screen and (max-width: 500px){
+    @media screen and (max-width: 500px) {
         &__copyright {
             margin-left: 32px;
         }
     }
 }
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 800px) {
     .footer {
         grid-template-columns: 1fr auto;
     }
 }
 
-@media screen and (max-width: 640px){
+@media screen and (max-width: 640px) {
     .footer {
         display: flex;
         flex-direction: column;

@@ -15,13 +15,16 @@
 }
 .header__navigation {
   position: absolute;
-  display: none;
+  display: flex;
   top: 27px;
   left: 50px;
 }
 @media screen and (max-width: 768px) {
   .header__navigation {
     left: 34px;
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility 0.5s, opacity 0.4s linear;
   }
 }
 @media screen and (max-width: 320px) {
@@ -30,7 +33,9 @@
   }
 }
 .header__navigation-open {
-  display: flex;
+  opacity: 1;
+  visibility: visible;
+  transition: visibility 0.5s, opacity 0.5s linear;
 }
 @media screen and (min-width: 768px) {
   .header__navigation {
@@ -65,9 +70,14 @@
 }
 .header__place-logo {
   margin: auto;
+  opacity: 1;
+  visibility: visible;
+  transition: visibility 0.5s, opacity 0.4s linear;
 }
 .header__close-logo {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 0.5s, opacity 0.3s linear;
 }
 .header__menu-button {
   display: none;

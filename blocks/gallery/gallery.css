@@ -1,13 +1,13 @@
 .gallery {
   display: flex;
   flex-direction: column;
-  background-color: #191D2C;
-  border-top: 1px solid #E1FD2C;
+  background-color: #191d2c;
+  border-top: 1px solid #e1fd2c;
 }
 .gallery__image {
   width: 720px;
   max-height: 540px;
-  border-right: 1px solid #E1FD2C;
+  border-right: 1px solid #e1fd2c;
 }
 @media screen and (max-width: 1200px) {
   .gallery__image {
@@ -37,8 +37,8 @@
   flex-direction: row;
   width: 620px;
   padding: 0 50px;
-  border-top: 1px solid #E1FD2C;
-  border-right: 1px solid #E1FD2C;
+  border-top: 1px solid #e1fd2c;
+  border-right: 1px solid #e1fd2c;
 }
 @media screen and (max-width: 1200px) {
   .gallery__flipping {
@@ -76,10 +76,10 @@
   width: 42px;
   height: 34px;
   cursor: pointer;
-  background-color: #191D2C;
+  background-color: #191d2c;
   padding: 0;
   border: 0;
-  color: #E1FD2C;
+  color: #e1fd2c;
   margin-left: 30px;
   margin-top: auto;
   margin-bottom: auto;

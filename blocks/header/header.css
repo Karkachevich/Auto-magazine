@@ -2,17 +2,20 @@
   position: relative;
   display: flex;
   min-height: 70px;
-  background-color: #191D2C;
+  background-color: #191d2c;
 }
 .header__navigation {
   position: absolute;
-  display: none;
+  display: flex;
   top: 27px;
   left: 50px;
 }
 @media screen and (max-width: 768px) {
   .header__navigation {
     left: 34px;
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility 0.5s, opacity 0.4s linear;
   }
 }
 @media screen and (max-width: 320px) {
@@ -21,7 +24,9 @@
   }
 }
 .header__navigation-open {
-  display: flex;
+  opacity: 1;
+  visibility: visible;
+  transition: visibility 0.5s, opacity 0.5s linear;
 }
 @media screen and (min-width: 768px) {
   .header__navigation {
@@ -52,13 +57,18 @@
   line-height: 16px;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: #E1FD2C;
+  color: #e1fd2c;
 }
 .header__place-logo {
   margin: auto;
+  opacity: 1;
+  visibility: visible;
+  transition: visibility 0.5s, opacity 0.4s linear;
 }
 .header__close-logo {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 0.5s, opacity 0.3s linear;
 }
 .header__menu-button {
   display: none;
@@ -72,7 +82,7 @@
     top: 23px;
     right: 34px;
     cursor: pointer;
-    background-color: #191D2C;
+    background-color: #191d2c;
     padding: 0;
     border: 0;
   }
