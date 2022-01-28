@@ -8,15 +8,15 @@ const imageGallery = document.querySelector('.gallery__image');
 const gallery = [
     {
         name: 'кузов авто',
-        link: '../images/auto1.jpg'
+        link: './images/auto1.jpg'
     },
     {
         name: 'водительское место',
-        link: '../images/auto2.jpg'
+        link: './images/auto2.jpg'
     },
     {
         name: 'салон',
-        link: '../images/auto3.jpg'
+        link: './images/auto3.jpg'
     }
 ]
 const buttonPrev = document.querySelector('#prev');
@@ -31,7 +31,6 @@ const linkMedia = document.querySelector('.media__link-button');
 const inputName = document.querySelector('.form__input_type_name');
 const inputLastName =document.querySelector('.form__input_type_lastName');
 const inputEmail = document.querySelector('.form__input_type_email');
-const textButtonForm = document.querySelector('.form__button-text');
 const buttonForm = document.querySelector('.form__button');
 
 openNav.addEventListener('click', function () {
@@ -93,10 +92,10 @@ buttonTwoMedia.addEventListener('click', function () {
 
 function activeButton() {
     if((inputName.value === '') || (inputLastName.value === '') || (inputEmail.value === '')) {
-        textButtonForm.textContent = "подписка";
+        buttonForm.textContent = "подписка";
     }
     else {
-        textButtonForm.textContent = "Готово!";
+        buttonForm.textContent = "Готово!";
     }
 }
 activeButton();

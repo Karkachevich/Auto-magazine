@@ -1,13 +1,16 @@
+@import "../constants";
+@import "../mixins";
+
 .gallery {
     display: flex;
     flex-direction: column;
-    background-color: #191d2c;
-    border-top: 1px solid #e1fd2c;
+    background-color: $ColorDark;
+    @include border-top;
 
     &__image {
         width: 720px;
         max-height: 540px;
-        border-right: 1px solid #e1fd2c;
+        @include border-right;
     }
     
     @media screen and (max-width: 1200px) {
@@ -32,8 +35,7 @@
 
     @media screen and (max-width: 500px) {
         &__image {
-            width: 280px;
-            height: 204px;
+            @include square(280px, 204px);
         }
     }
 
@@ -42,8 +44,8 @@
         flex-direction: row;
         width: 620px;
         padding: 0 50px;
-        border-top: 1px solid #e1fd2c;
-        border-right: 1px solid #e1fd2c;
+        @include border-top;
+        @include border-right;
     }
 
     @media screen and (max-width: 1200px) {
@@ -69,28 +71,24 @@
     }
 
     &__title {
-        font-weight: normal;
-        font-size: 46px;
-        line-height: 46px;
+        @include font-style(normal, 46px, 46px);
         margin: 50px 0;
     }
 
     @media screen and (max-width: 500px) {
         &__title {
-            font-size: 26px;
-            line-height: 26px;
+            @include font-style(normal, 26px, 26px);
             margin-bottom: 20px;
         }
     }
 
     &__button {
-        width: 42px;
-        height: 34px;
+        @include square(42px, 34px);
         cursor: pointer;
-        background-color: #191d2c;
+        background-color: $ColorDark;
         padding: 0;
         border: 0;
-        color: #e1fd2c;
+        color: $ColorLight;
         margin-left: 30px;
         margin-top: auto;
         margin-bottom: auto;
@@ -109,15 +107,13 @@
         &__button {
             margin-top: 53px;
             margin-left: 16px;
-            width: 24px;
-            height: 20px;
+            @include square(24px, 20px);
         }
     }
 
     @media screen and (max-width: 500px) {
         &__button-image {
-            width: 24px;
-            height: 20px;
+            @include square(24px, 20px);
         }
     }
 }
