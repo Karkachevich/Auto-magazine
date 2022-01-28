@@ -1,15 +1,16 @@
+@import "../constants";
+@import "../mixins";
+
 .media {
     display: grid;
     width: 100%;
     grid-template-columns: 50% 50%;
-    background-color: #191d2c;
+    background-color: $ColorDark;
     padding: 0;
-    border-top: 1px solid #e1fd2c;
+    @include border-top;
 
     &__title {
-        font-weight: normal;
-        font-size: 46px;
-        line-height: 46px;
+        @include font-style(normal, 46px, 46px);
         margin: 51px 50px;
     }
 
@@ -22,7 +23,7 @@
     &__section-subtitle {
         display: flex;
         flex-direction: column;
-        border-left: 1px solid #e1fd2c;
+        @include  border-left;
     }
 
     @media screen and (max-width: 800px) {
@@ -34,9 +35,7 @@
     &__subtitle {
         display: inline;
         margin: 0;
-        font-weight: 300;
-        font-size: 30px;
-        line-height: 42px;
+        @include font-style(300, 30px, 42px);
     }
 
     &__subtitle-style {
@@ -52,43 +51,34 @@
 
     @media screen and (max-width: 500px) {
         &__subtitle {
-            font-weight: 300;
-            font-size: 16px;
-            line-height: 27px;
+            @include font-style(300, 16px, 27px);
         }
     }
 
     &__subtitle-button {
-        width: 12px;
-        height: 12px;
-        background-color: #191d2c;
-        border: 1px solid #e1fd2c;
+        @include square(12px, 12px);
+        background-color: $ColorDark;
+        @include border;
         box-sizing: border-box;
         border-radius: 50%;
         padding: 0;
-        margin-top: auto;
-        margin-bottom: auto;
-        margin-left: 0;
-        margin-right: 14px;
+        margin: auto 14px 0 0;
         cursor: pointer;
     }
 
     &__subtitle-button_active {
-        background-color: #e1fd2c;
+        background-color: $ColorLight;
     }
 
     &__span-accent {
         display: inline;
-        font-weight: normal;
-        font-size: 30px;
-        line-height: 42px;
+        @include font-style(normal, 30px, 42px);
         margin: 0;
     }
 
     @media screen and (max-width: 500px) {
         &__span-accent {
-            font-size: 16px;
-            line-height: 27px;
+            @include font-style(normal, 16px, 27px);
         }
     }
 
@@ -106,14 +96,11 @@
 
     &__link-button {
         display: flex;
-        width: 110px;
-        height: 52px;
-        background-color: #191d2c;
-        border: 1px solid #e1fd2c;
-        font-weight: normal;
-        font-size: 19px;
-        line-height: 28px;
-        color: #e1fd2c;
+        @include square(110px, 52px);
+        background-color: $ColorDark;
+        @include border;
+        @include font-style(normal, 19px, 28px);
+        color: $ColorLight;
         box-sizing: border-box;
         border-radius: 50%;
         cursor: pointer;
@@ -126,15 +113,14 @@
     }
 
     &__link-button:hover {
-        color: #191d2c;
-        background-color: #e1fd2c;
+        color: $ColorDark;
+        background-color: $ColorLight;
         transition: linear 0.3s;
     }
 
     @media screen and (max-width: 500px) {
         &__link-button {
-            width: 88px;
-            height: 42px;
+            @include square(88px, 42px);
             font-size: 14px;
         }
     }

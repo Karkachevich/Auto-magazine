@@ -1,0 +1,14 @@
+@import "../mixins";
+
+.logo {
+    @include square(184px, 38px);
+
+    @media screen and (max-width: 375px) {
+        &_place_footer {
+            @include square(280px, 58px);
+        }
+        &_place_header {
+            @include square(100px, 20px);
+        }
+    }
+}

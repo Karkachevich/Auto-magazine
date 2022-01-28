@@ -1,3 +1,6 @@
+@import "../constants";
+@import "../mixins";
+
 .header {
     position: relative;
     display: flex;
@@ -59,13 +62,11 @@
     }
 
     &__link-text {
-        font-weight: normal;
+        @include font-style(normal, 12px, 16px);
         margin: 0;
-        font-size: 12px;
-        line-height: 16px;
         letter-spacing: 1px;
         text-transform: uppercase;
-        color: #e1fd2c;
+        color: $ColorLight;
     }
 
     &__place-logo {
@@ -108,8 +109,7 @@
     }
 
     &__menu-image {
-        width: 26px;
-        height: 24px;
+        @include square(26px, 24px);
     }
 
     &__menu-close {
@@ -118,8 +118,7 @@
 
     @media screen and (max-width: 375px) {
         &__menu-image {
-            width: 20px;
-            height: 20px;
+            @include square(20px, 20px);
         }
     }
 
