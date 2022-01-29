@@ -8,13 +8,16 @@
     @include border-top;
 
     &__image {
-        width: 720px;
+        //width: 720px;
+        width: 50%;
         max-height: 540px;
         @include border-right;
     }
     
     @media screen and (max-width: 1200px) {
         &__image {
+            width: 700px;
+            max-height: 510px;
             border-right: 0;
             margin: 0 auto;
         }
@@ -42,7 +45,7 @@
     &__flipping {
         display: flex;
         flex-direction: row;
-        width: 620px;
+        width: calc(50% - 100px);
         padding: 0 50px;
         @include border-top;
         @include border-right;
@@ -65,7 +68,7 @@
 
     @media screen and (max-width: 500px) {
         &__flipping {
-            width: calc(100%);
+            width: 100%;
             padding: 0;
         }
     }
