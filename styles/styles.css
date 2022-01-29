@@ -739,12 +739,14 @@ template {
   border-top: 1px solid #e1fd2c;
 }
 .gallery__image {
-  width: 720px;
+  width: 50%;
   max-height: 540px;
   border-right: 1px solid #e1fd2c;
 }
 @media screen and (max-width: 1200px) {
   .gallery__image {
+    width: 700px;
+    max-height: 510px;
     border-right: 0;
     margin: 0 auto;
   }
@@ -769,7 +771,7 @@ template {
 .gallery__flipping {
   display: flex;
   flex-direction: row;
-  width: 620px;
+  width: calc(50% - 100px);
   padding: 0 50px;
   border-top: 1px solid #e1fd2c;
   border-right: 1px solid #e1fd2c;
@@ -789,7 +791,7 @@ template {
 }
 @media screen and (max-width: 500px) {
   .gallery__flipping {
-    width: calc(100%);
+    width: 100%;
     padding: 0;
   }
 }
@@ -1027,7 +1029,7 @@ template {
   border-right: 0;
   width: 149px;
 }
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 400px) {
   .form__input_type_name {
     width: 119px;
   }
@@ -1036,7 +1038,7 @@ template {
   border-bottom: 0;
   width: 149px;
 }
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 400px) {
   .form__input_type_lastName {
     width: 119px;
   }
@@ -1045,7 +1047,7 @@ template {
   width: 240px;
   border-right: 0;
 }
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 400px) {
   .form__input_type_email {
     width: 180px;
   }
@@ -1091,7 +1093,7 @@ template {
 .footer__section:nth-child(2) {
   border-left: 1px solid #e1fd2c;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 825px) {
   .footer__section:nth-child(2) {
     border-left: 0;
     padding-left: 0;
@@ -1135,7 +1137,7 @@ template {
 .footer__place-logo {
   margin: 0 0 0 auto;
 }
-@media screen and (max-width: 645px) {
+@media screen and (max-width: 670px) {
   .footer__place-logo {
     margin: 0 auto 0 50px;
   }
@@ -1153,7 +1155,7 @@ template {
   text-align: right;
   letter-spacing: 1px;
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 670px) {
   .footer__copyright {
     margin: 20px auto 0 62px;
   }
@@ -1164,12 +1166,12 @@ template {
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 825px) {
   .footer {
     grid-template-columns: 1fr auto;
   }
 }
-@media screen and (max-width: 645px) {
+@media screen and (max-width: 670px) {
   .footer {
     display: flex;
     flex-direction: column;

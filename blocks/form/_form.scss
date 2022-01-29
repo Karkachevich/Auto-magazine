@@ -33,7 +33,7 @@
         width: 149px;
     }
 
-    @media screen and (max-width: 380px) {
+    @media screen and (max-width: 400px) {
         &__input_type_name {
             width: 119px;
         }
@@ -44,7 +44,7 @@
         width: 149px;
     }
 
-    @media screen and (max-width: 380px) {
+    @media screen and (max-width: 400px) {
         &__input_type_lastName {
             width: 119px;
         }
@@ -55,7 +55,7 @@
         border-right: 0;
     }
 
-    @media screen and (max-width: 380px) {
+    @media screen and (max-width: 400px) {
         &__input_type_email {
             width: 180px;
         }
