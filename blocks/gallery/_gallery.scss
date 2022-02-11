@@ -1,0 +1,134 @@
+@import "../constants";
+@import "../mixins";
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    background-color: $ColorDark;
+    @include border-top;
+
+    &__image {
+        //width: 720px;
+        width: 50%;
+        max-height: 540px;
+        @include border-right;
+    }
+    
+    @media screen and (max-width: 1200px) {
+        &__image {
+            width: 700px;
+            max-height: 510px;
+            border-right: 0;
+            margin: 0 auto;
+        }
+    }
+
+    @media screen and (max-width: 800px) {
+        &__image {
+            max-width: 700px;
+            max-height: 510px;
+        }
+    }
+
+    @media screen and (max-width: 766px) {
+        &__image {
+            width: calc(100% - 40px);
+        }
+    }
+
+    @media screen and (max-width: 500px) {
+        &__image {
+            @include square(280px, 204px);
+        }
+    }
+
+    &__flipping {
+        display: flex;
+        flex-direction: row;
+        width: calc(50% - 100px);
+        padding: 0 50px;
+        @include border-top;
+        @include border-right;
+    }
+
+    @media screen and (max-width: 1200px) {
+        &__flipping {
+            width: 668px;
+            padding: 0 16px;
+            border: 0;
+            margin: 0 auto;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        &__flipping {
+            width: calc(100% - 32px);
+        }
+    }
+
+    @media screen and (max-width: 500px) {
+        &__flipping {
+            width: 100%;
+            padding: 0;
+        }
+    }
+
+    &__title {
+        @include font-style(normal, 46px, 46px);
+        margin: 50px 0;
+    }
+
+    @media screen and (max-width: 500px) {
+        &__title {
+            @include font-style(normal, 26px, 26px);
+            margin-bottom: 20px;
+        }
+    }
+
+    &__button {
+        @include square(42px, 34px);
+        cursor: pointer;
+        background-color: $ColorDark;
+        padding: 0;
+        border: 0;
+        color: $ColorLight;
+        margin-left: 30px;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    &__button:hover {
+        opacity: 0.5;
+        transition: linear 0.3s;
+    }
+
+    &__button:nth-child(2) {
+        margin-left: auto;
+    }
+
+    @media screen and (max-width: 500px) {
+        &__button {
+            margin-top: 53px;
+            margin-left: 16px;
+            @include square(24px, 20px);
+        }
+    }
+
+    @media screen and (max-width: 500px) {
+        &__button-image {
+            @include square(24px, 20px);
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .gallery {
+        padding: 35px 34px 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .gallery {
+        padding: 20px 20px 0;
+    }
+}

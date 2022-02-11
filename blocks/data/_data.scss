@@ -1,0 +1,123 @@
+@import "../constants";
+@import "../mixins";
+
+.data {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 50% 25% 25%;
+    background-color: #191d2c;
+    padding: 0;
+    @include border-top;
+
+    &__info {
+        display: flex;
+        padding: 40px 50px 45px;
+    }
+
+    @media screen and (max-width: 1000px) {
+        &__info {
+            grid-row: 1;
+            grid-column: 1 / span 2;
+        }
+    }
+
+    @media screen and (max-width: 500px) {
+        &__info {
+            padding: 18px 20px;
+        }
+    }
+
+    &__info-text {
+        @include font-style(300, 30px, 42px);
+        margin: 0;
+        width: 560px;
+    }
+
+    @media screen and (max-width: 1000px) {
+        &__info-text {
+            width: 100%;
+        }
+    }
+
+    @media screen and (max-width: 500px) {
+        &__info-text {
+            @include font-style(300, 16px, 27px);
+        }
+    }
+
+    &__span-accent {
+        @include font-style(normal, 30px, 42px);
+        margin: 0;
+    }
+    @media screen and (max-width: 500px) {
+        &__span-accent {
+            @include font-style(normal, 16px, 20px);
+        }
+    }
+
+    &__arguments {
+        display: flex;
+        flex-direction: column;
+        padding: 40px 50px;
+        @include border-left;
+    }
+
+    @media screen and (max-width: 1000px) {
+        &__arguments {
+            grid-row: 2;
+            @include border-top;
+        }
+        &__arguments:nth-child(2) {
+            border-left: 0;
+        }
+    }
+
+    @media screen and (max-width: 500px) {
+        &__arguments {
+            grid-row: auto;
+            border-left: 0;
+            padding: 20px;
+        }
+    }
+
+    &__info-title {
+        @include font-style(normal, 30px, 37px);
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-top: 0;
+        margin-bottom: 50px;
+        letter-spacing: 2px;
+    }
+
+    @media screen and (max-width: 500px) {
+        &__info-title {
+            @include font-style(normal, 22px, 22px);
+            margin-bottom: 40px;
+        }
+    }
+
+    &__argument-text {
+        @include font-style(300, 21px, 32px);
+        margin: 0 0 2px;
+    }
+
+    @media screen and (max-width: 500px) {
+        &__argument-text {
+            @include font-style(normal, 16px, 20px);
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .data {
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto 506px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .data {
+        display: flex;
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,134 @@
+@import "../constants";
+@import "../mixins";
+
+.media {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 50% 50%;
+    background-color: $ColorDark;
+    padding: 0;
+    @include border-top;
+
+    &__title {
+        @include font-style(normal, 46px, 46px);
+        margin: 51px 50px;
+    }
+
+    @media screen and (max-width: 800px) {
+        &__title {
+            display: none;
+        }
+    }
+
+    &__section-subtitle {
+        display: flex;
+        flex-direction: column;
+        @include  border-left;
+    }
+
+    @media screen and (max-width: 800px) {
+        &__section-subtitle {
+            border-left: 0;
+        }
+    }
+
+    &__subtitle {
+        display: inline;
+        margin: 0;
+        @include font-style(300, 30px, 42px);
+    }
+
+    &__subtitle-style {
+        display: inline-block;
+        margin: 51px 50px 0;
+    }
+
+    @media screen and (max-width: 500px) {
+        &__subtitle-style {
+            margin: 21px 20px 0;
+        }
+    }
+
+    @media screen and (max-width: 500px) {
+        &__subtitle {
+            @include font-style(300, 16px, 27px);
+        }
+    }
+
+    &__subtitle-button {
+        @include square(12px, 12px);
+        background-color: $ColorDark;
+        @include border;
+        box-sizing: border-box;
+        border-radius: 50%;
+        padding: 0;
+        margin: auto 14px 0 0;
+        cursor: pointer;
+    }
+
+    &__subtitle-button_active {
+        background-color: $ColorLight;
+    }
+
+    &__span-accent {
+        display: inline;
+        @include font-style(normal, 30px, 42px);
+        margin: 0;
+    }
+
+    @media screen and (max-width: 500px) {
+        &__span-accent {
+            @include font-style(normal, 16px, 27px);
+        }
+    }
+
+    &__link-zone {
+        padding: 263px 50px 50px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    @media screen and (max-width: 500px) {
+        &__link-zone {
+            padding: 150px 20px 20px;
+        }
+    }
+
+    &__link-button {
+        display: flex;
+        @include square(110px, 52px);
+        background-color: $ColorDark;
+        @include border;
+        @include font-style(normal, 19px, 28px);
+        color: $ColorLight;
+        box-sizing: border-box;
+        border-radius: 50%;
+        cursor: pointer;
+        margin-right: 0;
+        margin-left: auto;
+        padding: 0;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+    }
+
+    &__link-button:hover {
+        color: $ColorDark;
+        background-color: $ColorLight;
+        transition: linear 0.3s;
+    }
+
+    @media screen and (max-width: 500px) {
+        &__link-button {
+            @include square(88px, 42px);
+            font-size: 14px;
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .media {
+        display: flex;
+        flex-direction: column;
+    }
+}

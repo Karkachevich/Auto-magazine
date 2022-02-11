@@ -1,44 +1,162 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>АВТО-ЖУРНАЛ</title>
-    <link rel="stylesheet" href="./styles/styles.css">
-</head>
-<body class="page">
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
+  <body class="page">
     <header class="header">
-        <nav class="header__navigation">
-            <a class="header__navigation-link page__link" href="./index.html">
-              <p class="header__link-text">Факты</p>
-            </a>
-            <a class="header__navigation-link page__link" href="./index.html">
-              <p class="header__link-text">ГАЛЕРЕЯ</p>
-            </a>
-            <a class="header__navigation-link page__link" href="./index.html">
-              <p class="header__link-text">ПРЕССА</p>
-            </a>
-        </nav>
-        <div class="header__mesto-logo">
-            <img src="./images/AUTO-MAGAZINE.svg" alt="логотип" class="logo">
-        </div>
-        <button class="header__menu-button">
-            <img src="./images/menu.svg" alt="меню" class="header__menu-image">
-        </button>
+      <nav class="header__navigation">
+        <a class="header__navigation-link" href="#data">
+          <p class="header__link-text">Факты</p>
+        </a>
+        <a class="header__navigation-link" href="#gallery">
+          <p class="header__link-text">ГАЛЕРЕЯ</p>
+        </a>
+        <a class="header__navigation-link" href="#media">
+          <p class="header__link-text">ПРЕССА</p>
+        </a>
+      </nav>
+      <div class="header__place-logo">
+        <img
+          src="./images/AUTO-MAGAZINE.svg"
+          alt="логотип"
+          class="logo logo_place_header"
+        />
+      </div>
+      <button type="button" class="header__menu-button">
+        <img src="./images/menu.svg" alt="меню" class="header__menu-image" />
+        <img
+          src="./images/close-icon.svg"
+          alt="закрыть"
+          class="header__close-novigation"
+        />
+      </button>
     </header>
     <main>
       <section class="presentation">
         <div class="presentation__info">
           <p class="presentation__text">volkswagen T1</p>
-          <h1 class="presentation__title">Новая версия популярного микроавтобуса</h1>
+          <h1 class="presentation__title">
+            Новая версия популярного микроавтобуса
+          </h1>
           <p class="presentation__text">С ЭЛЕКТРО ДВИГАТЕЛЕМ</p>
         </div>
-        <img src="./images/Rectangle.jpg" alt="авто" class="presentation__image">
-        <button class="presentation__button"><p class="presentation__button-text">подробнее</p></button>
+        <img
+          src="./images/Rectangle.jpg"
+          alt="авто"
+          class="presentation__image"
+        />
+        <button type="button" class="presentation__button">подробнее</button>
       </section>
-     
+      <section class="data" id="data">
+        <div class="data__info">
+          <blockquote class="data__info-text">
+            <span class="data__span-accent">VW T1 Electro:</span> Отделение
+            Volkswagen Commercial Vehicles представило концепт e-Bulli:
+            классический вэн T1 1966 года с электрической силовой установкой. По
+            словам производителя, проект получит коммерческое продолжение, и
+            через фирму-партнера eClassics наборы для конверсии микроавтобусов в
+            электрокары и уже готовые машины будут продавать частным клиентам.
+          </blockquote>
+        </div>
+        <div class="data__arguments">
+          <h2 class="data__info-title">ПЛЮСЫ</h2>
+          <p class="data__argument-text">+ Экологичный</p>
+          <p class="data__argument-text">+ Экономный</p>
+          <p class="data__argument-text">+ Тихий</p>
+        </div>
+        <div class="data__arguments">
+          <h2 class="data__info-title">минусы</h2>
+          <p class="data__argument-text">- Дорогой</p>
+          <p class="data__argument-text">- Подзарядка</p>
+        </div>
+      </section>
+      <section class="gallery" id="gallery">
+        <img src="#" alt="#" class="gallery__image" />
+        <div class="gallery__flipping">
+          <h2 class="gallery__title">Галерея</h2>
+          <button type="button" id="prev" class="gallery__button">
+            <img
+              src="./images/arrow_red.svg"
+              alt="в лево"
+              class="gallery__button-image"
+            />
+          </button>
+          <button type="button" id="next" class="gallery__button">
+            <img
+              src="./images/arrow_left.svg"
+              alt="в право"
+              class="gallery__button-image"
+            />
+          </button>
+        </div>
+      </section>
+      <section class="media" id="media">
+        <h2 class="media__title">Пресса</h2>
+        <div class="media__section-subtitle">
+          <div class="media__subtitle-style">
+            <span class="media__span-accent"></span>
+            <p class="media__subtitle"></p>
+          </div>
+          <div class="media__link-zone">
+            <button
+              type="button"
+              id="one"
+              class="media__subtitle-button"
+            ></button>
+            <button
+              type="button"
+              id="two"
+              class="media__subtitle-button"
+            ></button>
+            <a href="" target="_blank" class="media__link-button"> Читать </a>
+          </div>
+        </div>
+      </section>
     </main>
-   
-</body>
+    <footer class="footer">
+      <div class="footer__section">
+        <h2 class="footer__title">Подписка</h2>
+        <p class="footer__subtitle">На новые спецвыпуски машин.</p>
+        <form class="form">
+          <div class="form__style">
+            <input
+              type="text"
+              class="form__input form__input_type_name"
+              placeholder="ИМЯ"
+            />
+            <input
+              type="text"
+              class="form__input form__input_type_lastName"
+              placeholder="ФАМИЛИЯ"
+            />
+          </div>
+          <div class="form__style">
+            <input
+              type="email"
+              class="form__input form__input_type_email"
+              placeholder="ПОЧТА"
+            />
+            <button type="submit" class="form__button">
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="footer__section">
+        <div class="footer__place-logo">
+          <img
+            src="./images/AUTO-MAGAZINE.svg"
+            alt="логотип"
+            class="logo logo_place_footer"
+          />
+        </div>
+        <div class="footer__copyright">&copy; Auto-Magazine 2021</div>
+      </div>
+    </footer>
+    <script src="./scripts/script.js"></script>
+  </body>
 </html>

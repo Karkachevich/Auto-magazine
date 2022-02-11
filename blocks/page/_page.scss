@@ -1,7 +1,8 @@
+@import "../constants";
 .page {
     min-width: 320px;
     max-width: 1440px;
     margin: 0 auto;
+    color: $ColorLight;
     font-family: 'Source Sans Pro', sans-serif;
-    color: #E1FD2C;
   }

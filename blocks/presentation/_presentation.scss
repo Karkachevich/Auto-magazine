@@ -1,17 +1,21 @@
+@import "../constants";
+@import "../mixins";
+
 .presentation {
     display: grid;
     width: 100%;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 400px 140px;
-    background-color: #191D2C;
+    background-color: $ColorDark;
     padding: 150px 0;
-    border-top: 1px solid #E1FD2C ;
-         
+    @include border-top;
+
     &__info {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
+
     @media screen and (max-width: 1200px) {
         &__info {
             width: 100%;
@@ -22,31 +26,29 @@
         width: 720px;
         max-height: 540px;
         margin: auto;
-        //grid-area: 1 / 2;
     }
+
     @media screen and (max-width: 769px) {
         &__image {
             max-width: 700px;
             max-height: 510px;
         }
     }
+
     @media screen and (max-width: 742px) {
         &__image {
             width: calc(100% - 40px);
         }
     }
+
     @media screen and (max-width: 500px) {
         &__image {
-            width: 280px;
-            height: 202px;
+            @include square(280px, 202px);
         }
     }
 
-
     &__title {
-        font-weight: normal;
-        font-size: 65px;
-        line-height: 73px;
+        @include font-style(normal, 65px, 73px);
         text-align: center;
         margin-top: 30px;
         margin-bottom: 50px;
@@ -54,21 +56,19 @@
 
     @media screen and (max-width: 500px) {
         &__title {
-            font-size: 38px;
-            line-height: 50px;
+            @include font-style(normal, 38px, 50px);
             margin-top: 26px;
             margin-bottom: 30px;
         }
     }
 
     &__text {
-        font-weight: normal;
-        font-size: 19px;
-        line-height: 28px;
+        @include font-style(normal, 19px, 28px);
         text-align: center;
         text-transform: uppercase;
         margin: 0;
     }
+
     &__text:nth-child(1) {
         margin-top: 30px;
     }
@@ -84,23 +84,32 @@
 
     @media screen and (max-width: 500px) {
         &__text {
-            font-size: 11px;
-            line-height: 14px;
+            @include font-style(normal, 11px, 14px);
         }
         &__text:last-child {
             margin-bottom: 60px;
         }
     }
 
-
     &__button {
-        width: 360px;
-        height: 64px;
-        border: 1px solid #E1FD2C;
+        @include square(360px, 64px);
+        border: 1px solid $ColorLight;
         box-sizing: border-box;
-        background-color: #191D2C;
+        background-color: #191d2c;
         margin: auto auto 30px;
         padding: 0;
+        @include font-style(normal, 15px, 60px);
+        text-align: center;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $ColorLight;
+        cursor: pointer;
+    }
+
+    &__button:hover {
+        color: $ColorDark;
+        background-color: $ColorLight;
+        transition: linear 0.3s;
     }
 
     @media screen and (max-width: 1200px) {
@@ -109,31 +118,19 @@
             margin-bottom: 0;
         }
     }
+    
     @media screen and (max-width: 500px) {
         &__button {
             width: 280px;
             margin-top: 60px;
         }
     }
-
-    &__button-text {
-        font-style: normal;
-        font-weight: normal;
-        font-size: 15px;
-        line-height: 60px;
-        text-align: center;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        color: #E1FD2C;
-        margin: 0;
-    }
-
 }
 
 @media screen and (max-width: 1200px) {
     .presentation {
-        grid-template-columns: auto;
-        grid-template-rows: auto;
+        display: flex;
+        flex-direction: column;
         padding: 100px 0;
     }
 }

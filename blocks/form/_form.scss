@@ -1,0 +1,76 @@
+@import "../constants";
+@import "../mixins";
+
+.form {
+    display: flex;
+    flex-direction: column;
+
+    &__style {
+        display: flex;
+    }
+
+    &__input {
+        background-color: $ColorDark;
+        @include border;
+        color: $ColorLight;
+        height: 32px;
+        padding: 0 10px;
+        outline: none;
+    }
+
+    &__input::placeholder {
+        color: $ColorLight;
+        @include font-style(normal, 9px, 18px);
+    }
+
+    &__input:focus::placeholder {
+        color: transparent;
+    }
+
+    &__input_type_name {
+        border-bottom: 0;
+        border-right: 0;
+        width: 149px;
+    }
+
+    @media screen and (max-width: 400px) {
+        &__input_type_name {
+            width: 119px;
+        }
+    }
+
+    &__input_type_lastName {
+        border-bottom: 0;
+        width: 149px;
+    }
+
+    @media screen and (max-width: 400px) {
+        &__input_type_lastName {
+            width: 119px;
+        }
+    }
+
+    &__input_type_email {
+        width: 240px;
+        border-right: 0;
+    }
+
+    @media screen and (max-width: 400px) {
+        &__input_type_email {
+            width: 180px;
+        }
+    }
+
+    &__button {
+        background-color: $ColorLight;
+        @include border;
+        @include square(80px, 34px);
+        padding: 0;
+        cursor: pointer;
+        @include font-style(normal, 10px, 13px);
+        text-align: center;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $ColorDark;
+    }
+}
